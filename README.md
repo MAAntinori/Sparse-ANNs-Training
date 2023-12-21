@@ -27,3 +27,13 @@ cd your_repository
 
 Install the dependencies (see Dependencies).
 
+## Usage Training and Evaluation
+To train and evaluate models, run the main() function in the model_evaluation.py script:
+
+python model_evaluation.py
+
+This script trains CNN, DenseNet, and ResNet models with various sparsity levels, quantization options, and epochs. The results, including accuracy, precision, recall, inference time, and energy consumption, are saved to an Excel file.
+
+
+#License
+This project is licensed under the MIT License.
