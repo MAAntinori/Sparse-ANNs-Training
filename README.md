@@ -66,6 +66,7 @@ Ensure that your image dataset is organized into the following directory structu
 <img width="118" alt="image" src="https://github.com/MAAntinori/Sparse-ANNs-Training/assets/80471656/0bab0c40-a501-4fae-9e01-cb2071d269e2">
 <p>&nbsp;</p>
 And then for both training and testing repositories: 
+<p>&nbsp;</p>
 <img width="82" alt="image" src="https://github.com/MAAntinori/Sparse-ANNs-Training/assets/80471656/9f148749-f1bb-47ea-b85d-b5bb2ff737bb">
 
 
