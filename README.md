@@ -8,8 +8,8 @@ The models are trained on an 8x8, 16x16 and 32x32 pixels image dataset related t
 ## Dependencies
 Make sure you have the following dependencies installed:
 
-Python 3.x
-TensorFlow 2.x
+Python 3.10 64-bit
+TensorFlow 2.12
 TensorFlow Model Optimization (tfmot)
 NumPy
 Pandas
@@ -18,3 +18,12 @@ Psutil
 Tempfile
 Tracemalloc
 You can install these dependencies using the following command:
+pip install (dependency)
+
+## Installation
+Clone the repository:
+git clone https://github.com/your_username/your_repository.git
+cd your_repository
+
+Install the dependencies (see Dependencies).
+
