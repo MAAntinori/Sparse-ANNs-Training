@@ -8,15 +8,21 @@ The models are trained on an 8x8, 16x16 and 32x32 pixels image dataset related t
 ## Dependencies
 Make sure you have the following dependencies installed:
 
-Python 3.10 64-bit
-TensorFlow 2.12
-TensorFlow Model Optimization (tfmot)
-NumPy
-Pandas
-Matplotlib (for plotting results)
-Psutil
-Tempfile
-Tracemalloc
+-Python 3.10 64-bit
+-TensorFlow 2.12 as tf
+-TensorFlow Model Optimization (tfmot) as tfmot
+-from tensorflow import keras
+-NumPy as np
+-Pandas as pd
+-Matplotlib (for plotting results)
+-Psutil
+-Tempfile
+-Tracemalloc
+-os
+-time
+-gc
+
+
 You can install these dependencies using the following command:
 pip install (dependency)
 
