@@ -40,6 +40,11 @@ python model_evaluation.py
 
 This script trains CNN, DenseNet, and ResNet models with various sparsity levels, quantization options, and epochs. The results, including accuracy, precision, recall, inference time, and energy consumption, are saved to an Excel file.
 
+# Data Preparation
+Ensure that your image dataset is organized into the following directory structure:
+
+<img width="211" alt="image" src="https://github.com/MAAntinori/Sparse-ANNs-Training/assets/80471656/a59299e0-02ad-413c-b4f6-6ab10c566e24">
+
 
 # Results
 The results of model training and evaluation, including accuracy, precision, recall, inference time, energy consumption, and memory usage, are saved to an Excel file. You can find this file in the "Results" directory with the name: 
