@@ -38,12 +38,22 @@ To train and evaluate models, run the main() function in the model_evaluation.py
 
 python model_evaluation.py
 
+Directly in the main function, the user can set up his/her own models (1: CNN, 2: DenseNet, 3: ResNet), as well as sparsity levels and epochs.
+After the selection is made, the code will automatically execute untill all the models, sparsity levels and epochs results are saved into the Excel file.
 This script trains CNN, DenseNet, and ResNet models with various sparsity levels, quantization options, and epochs. The results, including accuracy, precision, recall, inference time, and energy consumption, are saved to an Excel file.
+
+Here, the gray_scale file are available as well for the users to be used. They function in the same way but the image are processed in black and white.
 
 # Data Preparation
 Ensure that your image dataset is organized into the following directory structure:
 
 <img width="211" alt="image" src="https://github.com/MAAntinori/Sparse-ANNs-Training/assets/80471656/a59299e0-02ad-413c-b4f6-6ab10c566e24">
+
+<img width="118" alt="image" src="https://github.com/MAAntinori/Sparse-ANNs-Training/assets/80471656/0bab0c40-a501-4fae-9e01-cb2071d269e2">
+
+And then for both training and testing repositories: 
+<img width="82" alt="image" src="https://github.com/MAAntinori/Sparse-ANNs-Training/assets/80471656/9f148749-f1bb-47ea-b85d-b5bb2ff737bb">
+
 
 
 # Results
