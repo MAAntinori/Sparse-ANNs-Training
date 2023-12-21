@@ -8,7 +8,9 @@ The models are trained on an 8x8, 16x16 and 32x32 pixels image dataset related t
 ## Dependencies
 Make sure you have the following dependencies installed:
 <p>&nbsp;</p>
-<p>-Python 3.10 64-bit</p>
+<p>&nbsp;</p>
+-Python 3.10 64-bit
+<p>&nbsp;</p>
 -TensorFlow 2.12 as tf
 -TensorFlow Model Optimization (tfmot) as tfmot
 -from tensorflow import keras
