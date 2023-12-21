@@ -56,7 +56,7 @@ Directly in the main() function, the user can set up his/her own models (1: CNN,
 After the selection is made, the code will automatically execute untill all the models, sparsity levels and epochs results are saved into the Excel file.
 This script trains CNN, DenseNet, and ResNet models with various sparsity levels, quantization options, and epochs. The results, including accuracy, precision, recall, inference time, and energy consumption, are saved to an Excel file.
 
-Here, the gray_scale file are available as well for the users to be used. They function in the same way but the image are processed in black and white.
+Here, the gray_scale files are available as well for the users to be used. They work in the same way but the images are processed in black and white.
 
 # Data Preparation
 Ensure that your image dataset is organized into the following directory structure:
