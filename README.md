@@ -7,8 +7,8 @@ The models are trained on an 8x8, 16x16 and 32x32 pixels image dataset related t
 
 ## Dependencies
 Make sure you have the following dependencies installed:
-
--Python 3.10 64-bit
+<p>&nbsp;</p>
+<p>-Python 3.10 64-bit</p>
 -TensorFlow 2.12 as tf
 -TensorFlow Model Optimization (tfmot) as tfmot
 -from tensorflow import keras
@@ -38,7 +38,7 @@ To train and evaluate models, run the main() function in the model_evaluation.py
 
 python model_evaluation.py
 
-Directly in the main function, the user can set up his/her own models (1: CNN, 2: DenseNet, 3: ResNet), as well as sparsity levels and epochs.
+Directly in the main() function, the user can set up his/her own models (1: CNN, 2: DenseNet, 3: ResNet), as well as sparsity levels and epochs.
 After the selection is made, the code will automatically execute untill all the models, sparsity levels and epochs results are saved into the Excel file.
 This script trains CNN, DenseNet, and ResNet models with various sparsity levels, quantization options, and epochs. The results, including accuracy, precision, recall, inference time, and energy consumption, are saved to an Excel file.
 
