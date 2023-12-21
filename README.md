@@ -41,5 +41,10 @@ python model_evaluation.py
 This script trains CNN, DenseNet, and ResNet models with various sparsity levels, quantization options, and epochs. The results, including accuracy, precision, recall, inference time, and energy consumption, are saved to an Excel file.
 
 
-#License
+# Results
+The results of model training and evaluation, including accuracy, precision, recall, inference time, energy consumption, and memory usage, are saved to an Excel file. You can find this file in the "Results" directory with the name: 
+test_memory_consumption_model_results_8x8_epochs.xlsx.
+It is possible to manually change the saving path as well as the name of the file that will be produced.
+
+# License
 This project is licensed under the MIT License.
