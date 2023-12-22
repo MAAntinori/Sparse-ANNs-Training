@@ -8,7 +8,6 @@ The models are trained on an 8x8, 16x16 and 32x32 pixels image dataset related t
 ## Dependencies
 Make sure you have the following dependencies installed:
 <p>&nbsp;</p>
-<p>&nbsp;</p>
 -Python 3.10 64-bit
 <p>&nbsp;</p>
 -TensorFlow 2.12 as tf
@@ -35,6 +34,9 @@ Make sure you have the following dependencies installed:
 <p>&nbsp;</p>
 -gc
 <p>&nbsp;</p>
+from reportlab.lib.pagesizes import letter
+<p>&nbsp;</p>
+from reportlab.pdfgen import canvas
 
 
 You can install these dependencies using the following command:
@@ -75,6 +77,7 @@ And then for both training and testing repositories:
 The results of model training and evaluation, including accuracy, precision, recall, inference time, energy consumption, and memory usage, are saved to an Excel file. You can find this file in the "Results" directory with the name: 
 test_memory_consumption_model_results_8x8_epochs.xlsx.
 It is possible to manually change the saving path as well as the name of the file that will be produced.
+The function monte_carlo_simulation() takes as arguments iterations, models, sparsity_levels, and epochs_to_try. Once the number of iterations is defined directly in the main() function, the code will start, and it will produce both the results in the Excel file and the mean of the results obtained by looping over the number of iterations selected by the user.
 
 # License
 This project is licensed under the MIT License.
