@@ -62,6 +62,16 @@ And then for both training and testing repositories:
 <img width="82" alt="image" src="https://github.com/MAAntinori/Sparse-ANNs-Training/assets/80471656/9f148749-f1bb-47ea-b85d-b5bb2ff737bb">
 
 ## Usage Training and Evaluation
+Before using the code, make sure to change the local paths where the images are located: 
+train_dir = r'C:\Users\matti\OneDrive\Desktop\Unibz\Laurea Magistrale\Data mining project\Data\Malaria dataset split - training and testing\Training_data_cells'
+test_dir = r'C:\Users\matti\OneDrive\Desktop\Unibz\Laurea Magistrale\Data mining project\Data\Malaria dataset split - training and testing\Testing_data_cells'
+
+Also, remember to change where you want to store locally the files that will be created.
+It is also possible to change their names.
+file_path = os.path.join(r'C:\Users\matti\OneDrive\Desktop\Unibz\Laurea Magistrale\Data mining project\Final', file_name)
+pdf_file_path = 'monte_carlo_simulation_results_final.pdf'
+detailed_results_file_path = 'detailed_monte_carlo_simulation_results_final.xlsx'
+
 To train and evaluate models, run the main() function in the Montecarlo.py script:
 
 Directly in the main() function, the user can set up his/her own models (1: CNN, 2: DenseNet, 3: ResNet), as well as sparsity levels, epochs and number of iterations (Monte Carlo simulation).
