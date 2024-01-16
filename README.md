@@ -63,13 +63,18 @@ And then for both training and testing repositories:
 
 ## Usage Training and Evaluation
 Before using the code, make sure to change the local paths where the images are located: 
+<p>&nbsp;</p>
 train_dir = r'C:\Users\matti\OneDrive\Desktop\Unibz\Laurea Magistrale\Data mining project\Data\Malaria dataset split - training and testing\Training_data_cells'
+<p>&nbsp;</p>
 test_dir = r'C:\Users\matti\OneDrive\Desktop\Unibz\Laurea Magistrale\Data mining project\Data\Malaria dataset split - training and testing\Testing_data_cells'
 
 Also, remember to change where you want to store locally the files that will be created.
 It is also possible to change their names.
+<p>&nbsp;</p>
 file_path = os.path.join(r'C:\Users\matti\OneDrive\Desktop\Unibz\Laurea Magistrale\Data mining project\Final', file_name)
+<p>&nbsp;</p>
 pdf_file_path = 'monte_carlo_simulation_results_final.pdf'
+<p>&nbsp;</p>
 detailed_results_file_path = 'detailed_monte_carlo_simulation_results_final.xlsx'
 
 To train and evaluate models, run the main() function in the Montecarlo.py script:
