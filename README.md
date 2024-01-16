@@ -64,21 +64,20 @@ And then for both training and testing repositories:
 ## Usage Training and Evaluation
 To train and evaluate models, run the main() function in the Montecarlo.py script:
 
-Directly in the main() function, the user can set up his/her own models (1: CNN, 2: DenseNet, 3: ResNet), as well as sparsity levels and epochs.
-After the selection is made, the code will automatically execute untill all the models, sparsity levels and epochs results are saved into the Excel file and a PDF report, with the means of the results, is created .
+Directly in the main() function, the user can set up his/her own models (1: CNN, 2: DenseNet, 3: ResNet), as well as sparsity levels, epochs and number of iterations (Monte Carlo simulation).
+<p>&nbsp;</p>
+The function monte_carlo_simulation() takes as arguments iterations, models, sparsity_levels, and epochs_to_try. Once the number of iterations is defined directly in the main() function, the code will start, and it will produce both the results in the Excel file and the mean of the results obtained by looping over the number of iterations selected by the user.
+<p>&nbsp;</p>
+Not only that, the model will ask the user to select the 'rgb'mode (images are coloures) or to use the 'grayscale' mode, where the images are in black and white.
+After the user has prompted the color mode, he/she will be asked to insert the desired image resolution, 8x8, 16x16 or 32x32.
+Finally, the code will automatically execute untill all the models, sparsity levels and epochs results are saved into the Excel file and a PDF report, with the means of the results, is created .
 This script trains CNN, DenseNet, and ResNet models with various sparsity levels, quantization options, and epochs. The results, including accuracy, precision, recall, inference time, and energy consumption, are saved to an Excel file and into the PDF file.
-
-Here, the gray_scale files are available as well for the users to be used. They work in the same way but the images are processed in black and white.
-
-
-
 
 
 # Results
 The results of model training and evaluation, including accuracy, precision, recall, inference time, energy consumption, and memory usage, are saved to an Excel file. You can find this file in the "Results" directory with the name: 
 test_memory_consumption_model_results_8x8_epochs.xlsx.
 It is possible to manually change the saving path as well as the name of the file that will be produced.
-The function monte_carlo_simulation() takes as arguments iterations, models, sparsity_levels, and epochs_to_try. Once the number of iterations is defined directly in the main() function, the code will start, and it will produce both the results in the Excel file and the mean of the results obtained by looping over the number of iterations selected by the user.
 
 # License
 This project is licensed under the MIT License.
