@@ -45,20 +45,10 @@ pip install (dependency)
 ## Installation
 Clone the repository:
 git clone https://github.com/your_username/your_repository.git
+<p>&nbsp;</p>
 cd your_repository
 
 Install the dependencies (see Dependencies).
-
-## Usage Training and Evaluation
-To train and evaluate models, run the main() function in the model_evaluation.py script:
-
-python model_evaluation.py
-
-Directly in the main() function, the user can set up his/her own models (1: CNN, 2: DenseNet, 3: ResNet), as well as sparsity levels and epochs.
-After the selection is made, the code will automatically execute untill all the models, sparsity levels and epochs results are saved into the Excel file.
-This script trains CNN, DenseNet, and ResNet models with various sparsity levels, quantization options, and epochs. The results, including accuracy, precision, recall, inference time, and energy consumption, are saved to an Excel file.
-
-Here, the gray_scale files are available as well for the users to be used. They work in the same way but the images are processed in black and white.
 
 # Data Preparation
 Ensure that your image dataset is organized into the following directory structure:
@@ -70,6 +60,17 @@ Ensure that your image dataset is organized into the following directory structu
 And then for both training and testing repositories: 
 <p>&nbsp;</p>
 <img width="82" alt="image" src="https://github.com/MAAntinori/Sparse-ANNs-Training/assets/80471656/9f148749-f1bb-47ea-b85d-b5bb2ff737bb">
+
+## Usage Training and Evaluation
+To train and evaluate models, run the main() function in the Montecarlo.py script:
+
+Directly in the main() function, the user can set up his/her own models (1: CNN, 2: DenseNet, 3: ResNet), as well as sparsity levels and epochs.
+After the selection is made, the code will automatically execute untill all the models, sparsity levels and epochs results are saved into the Excel file and a PDF report, with the means of the results, is created .
+This script trains CNN, DenseNet, and ResNet models with various sparsity levels, quantization options, and epochs. The results, including accuracy, precision, recall, inference time, and energy consumption, are saved to an Excel file and into the PDF file.
+
+Here, the gray_scale files are available as well for the users to be used. They work in the same way but the images are processed in black and white.
+
+
 
 
 
