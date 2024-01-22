@@ -602,7 +602,7 @@ def train_and_evaluate_models(models,sparsity_levels,epochs_to_try, color_mode_c
                     results_df.to_excel(file_path, index=False)
     return results_list 
 
-def create_pdf_report(mean_results, color_mode,image_size,model_choices, file_path):
+def create_pdf_report(mean_results, color_mode,image_size,model_choices,epochs_to_try, file_path):
     """
     Creates a PDF report summarizing mean results.
 
@@ -627,11 +627,14 @@ def create_pdf_report(mean_results, color_mode,image_size,model_choices, file_pa
     pdf_canvas.drawString(50, 720, f"Model Choices: {', '.join(map(str, model_choices))}")
     pdf_canvas.drawString(50, 700, f"Color Mode: {color_mode}")
     pdf_canvas.drawString(50, 680, f"Image Size: {image_size[0]}x{image_size[1]}")
+    pdf_canvas.drawString(50, 660, f"Epochs: {', '.join(map(str, epochs_to_try))}")
+    pdf_canvas.drawString(50, 640, f"Sparsity Levels: 0.0, 0.70, 0.80, 0.85, 0.90, 0.95")
+    
 
 
     # Add mean results to the PDF
     pdf_canvas.setFont("Helvetica", 12)
-    y_position = 660
+    y_position = 620
     for key, value in mean_results.items():
         pdf_canvas.drawString(50, y_position, f"{key}: {value}")
         y_position -= 20
@@ -668,10 +671,10 @@ def monte_carlo_simulation(iterations, models, sparsity_levels, epochs_to_try, c
 
     # Calculate mean values for each configuration
     mean_results = {
-    'Model': np.mean([int(result['Model']) for result in results_list]),  # Convert 'Model' to int
-    'Sparsity': np.mean(results_df['Sparsity']),
+    #'Model': np.mean([int(result['Model']) for result in results_list]),  # Convert 'Model' to int
+    #'Sparsity': np.mean(results_df['Sparsity']),
     'Quantized': np.mean(results_df['Quantized']),
-    'Epochs': np.mean(results_df['Epochs']),
+    #'Epochs': np.mean(results_df['Epochs']),
     'Accuracy': np.mean(results_df['Accuracy']),
     'Precision': np.mean(results_df['Precision']),
     'Recall': np.mean(results_df['Recall']),
@@ -686,7 +689,7 @@ def monte_carlo_simulation(iterations, models, sparsity_levels, epochs_to_try, c
     print(mean_results)
     # Save mean results to a PDF file
     pdf_file_path = 'monte_carlo_simulation_results_final.pdf'
-    create_pdf_report(mean_results,color_mode_choice,image_size,models, pdf_file_path)
+    create_pdf_report(mean_results,color_mode_choice,image_size,models,epochs_to_try, pdf_file_path)
     # Save detailed results to an Excel file
     detailed_results_file_path = 'detailed_monte_carlo_simulation_results_final.xlsx'
     results_df.to_excel(detailed_results_file_path, index=False)
@@ -700,12 +703,11 @@ def main():
     - None
     """
      # Models and sparsity levels to iterate over
-    models = ['1', '2', '3']  # Model choices (1: CNN, 2: DenseNet, 3: ResNet)
+    models = ['1']  # Model choices (1: CNN, 2: DenseNet, 3: ResNet)
     sparsity_levels = [0.0, 0.70, 0.80, 0.85, 0.90, 0.95]
-    #sparsity_levels = [0.0]
     # Create a list of epoch values to iterate through
     epochs_to_try = [0,2, 5,10, 15,20,25,30]
-    #epochs_to_try = [2]
+    
         
     # Prompt user for color mode choice
     color_mode_choice = input("Choose color mode ('rgb' for colored, 'grayscale' for grayscale): ")
@@ -729,7 +731,7 @@ def main():
     train_data, val_data, test_data = create_data_generators(color_mode=color_mode_choice, image_size=image_size)
     
     train_and_evaluate_models(models,sparsity_levels,epochs_to_try,color_mode_choice)
-    iterations =2  # You can adjust this value
+    iterations =1  # You can adjust this value
     monte_carlo_simulation(iterations, models, sparsity_levels, epochs_to_try,color_mode_choice, image_size)
 
 
